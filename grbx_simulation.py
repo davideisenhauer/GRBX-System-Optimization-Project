@@ -2,6 +2,7 @@ import simpy
 import random
 import statistics
 
+# Class representing the GRBX system simulation
 class GRBXSimulation:
     def __init__(
         self,
@@ -19,6 +20,7 @@ class GRBXSimulation:
         self.service_max = service_max
         self.capacity = capacity
 
+        # To ensure consistent results
         random.seed(seed)
 
         # tracking
@@ -51,6 +53,7 @@ class GRBXSimulation:
 
             self.users_completed += 1
 
+    # Generates users entering the system over time
     def arrivals(self, env, system):
         while True:
             env.process(self.user(env, system))
@@ -79,7 +82,7 @@ class GRBXSimulation:
 
         return results
 
-
+# Function to print simulation results in a clean format
 def print_results(title, results):
     print(title)
     print("-" * 40)
@@ -93,7 +96,7 @@ def print_results(title, results):
     print(f"Utilization: {results['utilization']:.2f}")
     print()
 
-
+# Main execution block
 if __name__ == "__main__":
 
     # Scenario 1: Current/Baseline
