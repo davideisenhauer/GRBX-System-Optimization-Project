@@ -28,7 +28,7 @@ To understand how increasing user demand impacts system performance and identify
 
 ## How to Run
 ```bash
-git clone https://github.com/yourusername/GRBX-System-Optimization-Project.git
+git clone https://github.com/davideisenhauer/GRBX-System-Optimization-Project.git
 cd GRBX-System-Optimization-Project
 pip install simpy
 python grbx_simulation.py
